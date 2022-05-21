@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency_Space" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundImg" translatesAutoresizingMaskIntoConstraints="NO" id="uuP-ra-u21">
+                                <rect key="frame" x="-1" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hryvnias space " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hu8-9z-WEh">
+                                <rect key="frame" x="20" y="44" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7fr-WJ-oUZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqk-cs-WzC">
+                                <rect key="frame" x="100" y="124" width="214" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="xng-Zd-QJO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="ppt-dD-zlz">
+                                <rect key="frame" x="0.0" y="344" width="414" height="31"/>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-136731600">
+                                    <!--1996-09-01 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="61e-2q-CXl"/>
+                                </connections>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pnv-RL-Fso">
+                                <rect key="frame" x="20" y="170" width="234" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="B6d-F3-oUX">
+                                        <rect key="frame" x="0.0" y="0.5" width="72.5" height="49"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nno-bx-NQe">
+                                        <rect key="frame" x="80.5" y="0.0" width="73" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="usd value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjn-cW-oRS">
+                                        <rect key="frame" x="161.5" y="0.0" width="72.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zOe-st-R03"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jmi-Jy-dgF">
+                                <rect key="frame" x="20" y="230" width="234" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eurosign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rpC-GT-avl">
+                                        <rect key="frame" x="0.0" y="0.5" width="72.5" height="49"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvt-ew-XMH">
+                                        <rect key="frame" x="80.5" y="0.0" width="73" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eur value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO0-Ql-IEf">
+                                        <rect key="frame" x="161.5" y="0.0" width="72.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="x3c-jx-N5s"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lz0-hH-bOq">
+                                <rect key="frame" x="126" y="280" width="161" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Gir-ZS-D5N"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Choose date"/>
+                                <connections>
+                                    <action selector="presentDatePickerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FoJ-Nt-5w9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jmi-Jy-dgF" firstAttribute="top" secondItem="Pnv-RL-Fso" secondAttribute="bottom" constant="10" id="1wx-By-dES"/>
+                            <constraint firstItem="lz0-hH-bOq" firstAttribute="top" secondItem="jmi-Jy-dgF" secondAttribute="bottom" id="3FZ-RX-X4L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pnv-RL-Fso" secondAttribute="trailing" constant="160" id="62q-qE-f9D"/>
+                            <constraint firstItem="Dqk-cs-WzC" firstAttribute="top" secondItem="Hu8-9z-WEh" secondAttribute="bottom" constant="30" id="7q7-Lq-HRW"/>
+                            <constraint firstItem="Hu8-9z-WEh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DTZ-tN-EWx"/>
+                            <constraint firstItem="jmi-Jy-dgF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KzE-Hq-cFu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dqk-cs-WzC" secondAttribute="trailing" constant="100" id="NUc-L4-cgJ"/>
+                            <constraint firstItem="Dqk-cs-WzC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="QaK-dN-7DA"/>
+                            <constraint firstItem="ppt-dD-zlz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XGA-ZE-ASa"/>
+                            <constraint firstItem="lz0-hH-bOq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="bb5-No-2wc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jmi-Jy-dgF" secondAttribute="trailing" constant="160" id="cS9-ss-5Oc"/>
+                            <constraint firstItem="ppt-dD-zlz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jNY-4O-EDq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hu8-9z-WEh" secondAttribute="trailing" constant="20" id="klI-nQ-NKo"/>
+                            <constraint firstItem="Hu8-9z-WEh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mg8-dD-6cn"/>
+                            <constraint firstItem="Pnv-RL-Fso" firstAttribute="top" secondItem="Dqk-cs-WzC" secondAttribute="bottom" constant="22" id="ofn-KS-Dod"/>
+                            <constraint firstItem="ppt-dD-zlz" firstAttribute="top" secondItem="lz0-hH-bOq" secondAttribute="bottom" constant="24" id="r3R-6J-Bnb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lz0-hH-bOq" secondAttribute="trailing" constant="127" id="s2j-c6-Too"/>
+                            <constraint firstItem="Pnv-RL-Fso" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="u87-0z-Ouu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currencyDatePicker" destination="ppt-dD-zlz" id="lPt-LF-6og"/>
+                        <outlet property="currentDateLabel" destination="Dqk-cs-WzC" id="R0n-HO-Gah"/>
+                        <outlet property="dateButton" destination="lz0-hH-bOq" id="TK8-15-F7D"/>
+                        <outlet property="eurValueLabel" destination="XO0-Ql-IEf" id="bo0-Ej-APj"/>
+                        <outlet property="usdValueLabel" destination="vjn-cW-oRS" id="ftA-gL-fyQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundImg" width="282" height="501"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="eurosign.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
